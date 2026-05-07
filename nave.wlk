@@ -13,7 +13,11 @@ object nave {
     }
 
     method pasajerosConMayorVitalidad(){
-        return pasajeros.find({c => c.vitalidad().max()})
+        return pasajeros.max({c => c.vitalidad()})
+    }
+
+    method pasajerosConMenorVitalidad(){
+        return pasajeros.min({c => c.vitalidad() })
     }
 
 }

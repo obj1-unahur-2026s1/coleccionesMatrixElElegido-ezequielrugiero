@@ -2,6 +2,9 @@ import nave.*
 object neo {
     var vitalidad = 100
 
+    method vitalidad (){
+        return vitalidad
+    }
     method esElElegido(){
         return true
     }
