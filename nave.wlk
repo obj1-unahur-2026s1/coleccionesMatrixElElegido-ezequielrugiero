@@ -19,5 +19,10 @@ object nave {
     method pasajerosConMenorVitalidad(){
         return pasajeros.min({c => c.vitalidad() })
     }
+    
+    method naveEquilibrada(){
+        return pasajeros.any({c =>c.pasajerosConMenorVitalidad()* 2 >= pasajeros.pasajerosConMayorVitalidad()})
+
+    }
 
 }

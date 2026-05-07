@@ -1,9 +1,10 @@
+import nave.*
+import matrix.*
 
+describe "Se pruevan todos los metodos" {
 
-describe "group of tests " {
-
-  test "test 01" {
-    assert.equals(100, 50+50)
+  test "si la nave esta equilibrada o no" {
+    assert.notThat(nave.naveEquilibrada())
   }
 
 }
