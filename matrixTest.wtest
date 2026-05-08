@@ -1,10 +1,44 @@
-import nave.*
+
 import matrix.*
+import nave.*
+describe "group of tests " {
 
-describe "Se pruevan todos los metodos" {
+  test "trinity es pasajero con menor vitalidad" {
+    assert.equals(trinity, nave.pasajerosConMenorVitalidad())
+  }
 
-  test "si la nave esta equilibrada o no" {
-    assert.notThat(nave.naveEquilibrada())
+  test "neo  es pasajero con mayor vitalidad" {
+    assert.equals(neo, nave.pasajerosConMayorVitalidad())
+  }
+
+  test "la navedad esta equilibraba con respecto a la vitalidad de los pasajeros" {
+    assert.notThat(nave.naveEquilibrada ())
+  }
+    test "neo  es el elegido" {
+    assert.that(nave.elElegitoEstaEnLaNave())
+  }
+
+  test "La nave esta vacia" {
+    nave.naveColisiona()
+    assert.equals(0, nave.cuantosPasajerosHay())
+  }
+
+   test "morfeo pierde todo su vitalidad hasta cero" {
+    morfeo.saltar()
+    morfeo.saltar()
+    morfeo.saltar()
+    morfeo.saltar()
+    morfeo.saltar()
+    morfeo.saltar()
+    morfeo.saltar()
+    morfeo.saltar()
+    morfeo.saltar()
+    assert.equals(0, morfeo.vitalidad())
+  }
+
+   test "La nave esta llena" {
+    nave.naveAcelera()
+    assert.equals(6, nave.cuantosPasajerosHay())
   }
 
 }

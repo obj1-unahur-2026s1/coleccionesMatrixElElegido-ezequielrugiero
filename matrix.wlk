@@ -24,21 +24,23 @@ object neo {
 
 object morfeo {
     var vitalidad = 8
+    var descansado = true
 
     method vitalidad (){
         return vitalidad
     }
 
-    method descansado (){
-        return true
-    }
+   method descansado (){
+     descansado = not descansado
+     return descansado
+   }
 
     method esElElegido(){
         return false
     }
     method saltar (){
-        vitalidad = vitalidad - 1
-        return not self.descansado() 
+        vitalidad = (vitalidad - 1).max (0)
+        self.descansado()
     }
 
 
